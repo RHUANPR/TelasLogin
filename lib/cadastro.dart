@@ -21,6 +21,7 @@ class _CadastroPageState extends State<CadastroPage> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
+          autovalidateMode: AutovalidateMode.always,
           key: _formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -58,8 +59,8 @@ class _CadastroPageState extends State<CadastroPage> {
                 decoration: InputDecoration(
                   labelText: 'Senha',
                 ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
+                validator: (String? senha) {
+                  if (String? == null || value.isEmpty) {
                     return 'Por favor, informe sua senha';
                   }
                   return null;
